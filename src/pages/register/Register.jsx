@@ -6,7 +6,9 @@ export default function Register() {
       <div className="loginWrapper">
         <div className="loginLeft">
           <h3 className="loginLogo">Groupomania</h3>
-          <span className="loginDescription">Groupomania social network</span>
+          <span className="loginDescription">
+            Groupomania reseau professionel
+          </span>
         </div>
         <div className="loginRight">
           <div className="loginBox">
