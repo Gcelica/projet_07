@@ -5,10 +5,11 @@ export default function Register() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Groupomania</h3>
-          <span className="loginDescription">
-            Groupomania reseau professionel
-          </span>
+          <img
+            src="/assets/logo/icon-left-font-monochrome-black.png"
+            alt="Logo Groupomania"
+            className="loginLogo"
+          />
         </div>
         <div className="loginRight">
           <div className="loginBox">

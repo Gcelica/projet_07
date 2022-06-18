@@ -5,10 +5,11 @@ export default function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">Groupomania</h3>
-          <span className="loginDescription">
-            " Ensemble, plus loin et au-delà "
-          </span>
+          <img
+            src="/assets/logo/icon-left-font-monochrome-black.png"
+            alt="Logo Groupomania"
+            className="loginLogo"
+          />
         </div>
         <div className="loginRight">
           <div className="loginBox">

@@ -16,11 +16,12 @@ export default function Share() {
         <hr className="shareHr" />
         <div className="shareBottom">
           <div className="shareOptions">
-            <div className="sharOption">
-              <PermMedia className="shareIcon" />
+            <div className="shareOption">
+              <PermMedia htmlColor="blue" className="shareIcon" />
               <span className="shareOptionText">Photo ou vidéo</span>
             </div>
           </div>
+          <button className="shareButton">publier</button>
         </div>
       </div>
     </div>
