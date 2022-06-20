@@ -1,5 +1,6 @@
 import "./topbar.css";
-import { Search, Person, Chat, Notifications } from "@mui/icons-material";
+import { Person, Chat, Notifications } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 export default function Topbar() {
   return (
@@ -7,20 +8,13 @@ export default function Topbar() {
       <div className="topbarLeft">
         <span className="logo">Groupomania</span>
       </div>
-      <div className="topbarCenter">
-        <div className="searchbar">
-          <Search className="searchIcon" />
-          <input
-            placeholder="Search for friend, post or video"
-            className="searchInput"
-          />
-        </div>
-      </div>
+
       <div className="topbarRight">
-        <div className="topbarLinks">
-          <span className="topbarLink">Page d'accueil</span>
-          <span className="topbarLink">Historique</span>
-        </div>
+        <nav>
+          <Link className="topbarLink" to="/">
+            Accueil
+          </Link>
+        </nav>
         <div className="topbarIcons">
           <div className="topbarIconItem">
             <Person />

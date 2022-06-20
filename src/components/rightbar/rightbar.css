@@ -9,6 +9,7 @@
 .eventContainer {
   display: flex;
   align-items: center;
+  margin: 3%;
 }
 
 .eventIcon {

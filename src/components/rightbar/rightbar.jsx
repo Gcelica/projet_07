@@ -8,7 +8,7 @@ export default function Rightbar() {
         <div className="eventContainer">
           <Event className="eventIcon" />
           <span className="eventText">
-            Conférence sur le bien être au tavail
+            Conférence sur le bien être au travail
           </span>
         </div>
       </div>
