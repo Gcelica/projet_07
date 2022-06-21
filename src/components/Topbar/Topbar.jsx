@@ -1,18 +1,24 @@
 import "./topbar.css";
-import { Person, Chat, Notifications } from "@mui/icons-material";
+import { Person, Chat, Notifications, Logout } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo">Groupomania</span>
+        <Link className="topbarLink" to="/">
+          <img
+            src="assets/logo/icon-left-font-monochrome-black.png"
+            alt=""
+            className="logo"
+          />
+        </Link>
       </div>
 
       <div className="topbarRight">
         <nav>
-          <Link className="topbarLink" to="/">
-            Accueil
+          <Link className="topbarLink" to="/login">
+            <Logout />
           </Link>
         </nav>
         <div className="topbarIcons">
@@ -29,7 +35,15 @@ export default function Topbar() {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <img src="/assets/person/images-1.jpg" alt="" className="topbarImg" />
+        <nav>
+          <Link className="topbarLink" to="/profile">
+            <img
+              src="/assets/person/images-1.jpg"
+              alt=""
+              className="topbarImg"
+            />
+          </Link>
+        </nav>
       </div>
     </div>
   );
