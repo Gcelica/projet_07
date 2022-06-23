@@ -1,6 +1,6 @@
-import "./register.css";
+import "./signup.css";
 
-export default function Register() {
+export default function Signup() {
   return (
     <div className="login">
       <div className="loginWrapper">

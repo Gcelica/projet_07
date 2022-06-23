@@ -19,7 +19,7 @@ export default function Login() {
             <button className="loginButton">Connexion</button>
             <span className="loginForgot">mot de passe oublié ?</span>
             <nav>
-              <Link className="topbarLink" to="/register">
+              <Link className="topbarLink" to="/signup">
                 <button className="loginRegisterButton">
                   Créer un nouveau compte
                 </button>
