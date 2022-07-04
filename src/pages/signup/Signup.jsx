@@ -1,6 +1,29 @@
 import "./signup.css";
 
-export default function Signup() {
+import { Link } from "react-router-dom";
+
+function Signup() {
+  function handleClick(e) {
+    e.preventDefault();
+
+    const userName = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    console.log(email);
+    const password = document.getElementById("password").value;
+    console.log(password);
+    console.log("Le lien a été cliqué.");
+
+    const data = {
+      method: "POST",
+      body: JSON.stringify({ email, password, userName }),
+      headers: { "content-Type": "application/json" },
+    };
+    console.log(data);
+    fetch("http://localhost:5500/api/users/signup", data).then((result) => {
+      console.log(result);
+    });
+  }
+
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -13,15 +36,32 @@ export default function Signup() {
         </div>
         <div className="loginRight">
           <div className="loginBox">
-            <input placeholder="Identifiant" className="loginInput" />
-            <input placeholder="Email" className="loginInput" />
+            <input
+              placeholder="Identifiant"
+              className="loginInput"
+              id="username"
+              type="text"
+            />
+            <input placeholder="Email" className="loginInput" id="email" />
 
-            <input placeholder="Nouveau mot de passe" className="loginInput" />
-            <button className="loginButton">Créer nouveau compte</button>
-            <button className="loginRegisterButton">Se connecter</button>
+            <input
+              placeholder="Nouveau mot de passe"
+              className="loginInput"
+              id="password"
+            />
+            <button className="loginButton" onClick={handleClick}>
+              Créer nouveau compte
+            </button>
+            <nav>
+              <Link to="/Login">
+                <button className="loginRegisterButton">Se connecter</button>
+              </Link>
+            </nav>
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+export default Signup;

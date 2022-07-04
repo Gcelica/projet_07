@@ -1,4 +1,4 @@
-/*import { Chat, HelpOutline, RssFeed, WorkOutline } from "@mui/icons-material";
+import { Chat, HelpOutline, RssFeed, WorkOutline } from "@mui/icons-material";
 import "./sidebar.css";
 
 export default function Sidebar() {
@@ -26,4 +26,4 @@ export default function Sidebar() {
       </div>
     </div>
   );
-}*/
+}

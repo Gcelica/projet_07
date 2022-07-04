@@ -1,3 +1,6 @@
+
+
+
 .login {
   width: 100vw;
   height: 100vh;
@@ -48,6 +51,7 @@
 }
 
 .loginButton {
+  
   height: 50px;
   border-radius: 10px;
   border: none;
@@ -69,9 +73,9 @@
 }
 
 .loginRegisterButton {
-  width: 60%;
+ 
   height: 50px;
-  align-self: center;
+  align-items: center;
   border-radius: 10px;
   border: none;
   background-color: #ffd7d7;

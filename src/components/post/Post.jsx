@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import "./post.css";
 import { MoreVert, ThumbUp } from "@mui/icons-material";
@@ -8,7 +8,7 @@ import { MoreVert, ThumbUp } from "@mui/icons-material";
 const Post = () => {
   //useEffect se joue lorsque le composant est monté
   useEffect(() => {
-    axios.get("http://localhost:3000/profile").then((res) => console.log(res));
+    axios.get("http://localhost:3000/").then((res) => console.log(res));
   }, []);
 
   return (
@@ -29,7 +29,7 @@ const Post = () => {
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <div htmlColor="red" className="likeIcon">
+            <div className="likeIcon">
               <ThumbUp htmlColor="blue" />
             </div>
 

@@ -23,15 +23,15 @@ export default function Topbar() {
         </nav>
         <div className="topbarIcons">
           <div className="topbarIconItem">
-            <Person />
+            <Person htmlColor="black" />
             <span className="topbarIconBadge">1</span>
           </div>
           <div className="topbarIconItem">
-            <Chat />
+            <Chat htmlColor="black" />
             <span className="topbarIconBadge">2</span>
           </div>
           <div className="topbarIconItem">
-            <Notifications />
+            <Notifications htmlColor="black" />
             <span className="topbarIconBadge">1</span>
           </div>
         </div>

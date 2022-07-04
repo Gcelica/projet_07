@@ -1,7 +1,27 @@
 import "./login.css";
 import { Link } from "react-router-dom";
 
-export default function Login() {
+function Login() {
+  function handleClick(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    console.log(email);
+    const password = document.getElementById("login-password").value;
+    console.log(password);
+    console.log("Le lien a été cliqué.");
+
+    const data = {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: { "content-Type": "application/json" },
+    };
+    console.log(data);
+    fetch("http://localhost:5500/api/users/login", data).then((result) => {
+      console.log(result);
+    });
+  }
+
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -14,20 +34,19 @@ export default function Login() {
         </div>
         <div className="loginRight">
           <div className="loginBox">
-            <input
-              placeholder="Email"
-              className="loginInput"
-              id="login-email"
-            />
+            <input placeholder="Email" className="loginInput" id="loginEmail" />
             <input
               placeholder="Mot de passe"
               className="loginInput"
               type="password"
+              id="login-password"
             />
-            <button className="loginButton">Connexion</button>
+            <button className="loginButton" onClick={handleClick}>
+              Connexion
+            </button>
             <span className="loginForgot">mot de passe oublié ?</span>
             <nav>
-              <Link className="topbarLink" to="/signup">
+              <Link to="/Signup">
                 <button className="loginRegisterButton">
                   Créer un nouveau compte
                 </button>
@@ -39,3 +58,5 @@ export default function Login() {
     </div>
   );
 }
+
+export default Login;
