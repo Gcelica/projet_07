@@ -7,6 +7,7 @@ function Signup() {
     e.preventDefault();
 
     const userName = document.getElementById("username").value;
+    console.log(userName);
     const email = document.getElementById("email").value;
     console.log(email);
     const password = document.getElementById("password").value;
@@ -19,9 +20,12 @@ function Signup() {
       headers: { "content-Type": "application/json" },
     };
     console.log(data);
-    fetch("http://localhost:5500/api/users/signup", data).then((result) => {
-      console.log(result);
-    });
+
+    fetch("http://localhost:5500/api/users/signup", data)
+      .then((response) => response.json())
+      .then((test) => {
+        console.log(test);
+      });
   }
 
   return (
@@ -46,10 +50,11 @@ function Signup() {
 
             <input
               placeholder="Nouveau mot de passe"
+              type="password"
               className="loginInput"
               id="password"
             />
-            <button className="loginButton" onClick={handleClick}>
+            <button className="loginButton" type="submit" onClick={handleClick}>
               Créer nouveau compte
             </button>
             <nav>

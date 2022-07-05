@@ -2,7 +2,7 @@ import "./profile.css";
 import Topbar from "../../components/topbar/Topbar";
 import Feed from "../../components/feed/Feed";
 
-export default function Profile() {
+function Profile() {
   return (
     <>
       <Topbar />
@@ -34,3 +34,5 @@ export default function Profile() {
     </>
   );
 }
+
+export default Profile;

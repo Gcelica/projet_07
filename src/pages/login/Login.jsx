@@ -17,9 +17,12 @@ function Login() {
       headers: { "content-Type": "application/json" },
     };
     console.log(data);
-    fetch("http://localhost:5500/api/users/login", data).then((result) => {
-      console.log(result);
-    });
+    fetch("http://localhost:5500/api/users/login", data)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.userId);
+        //document.location.href = "/?id=" + data.userId;
+      });
   }
 
   return (
