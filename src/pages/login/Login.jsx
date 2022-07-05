@@ -7,7 +7,7 @@ function Login() {
 
     const email = document.getElementById("loginEmail").value;
     console.log(email);
-    const password = document.getElementById("login-password").value;
+    const password = document.getElementById("loginPassword").value;
     console.log(password);
     console.log("Le lien a été cliqué.");
 
@@ -42,7 +42,7 @@ function Login() {
               placeholder="Mot de passe"
               className="loginInput"
               type="password"
-              id="login-password"
+              id="loginPassword"
             />
             <button className="loginButton" onClick={handleClick}>
               Connexion

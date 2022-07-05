@@ -6,8 +6,8 @@ function Signup() {
   function handleClick(e) {
     e.preventDefault();
 
-    const userName = document.getElementById("username").value;
-    console.log(userName);
+    const username = document.getElementById("username").value;
+    console.log(username);
     const email = document.getElementById("email").value;
     console.log(email);
     const password = document.getElementById("password").value;
@@ -16,7 +16,7 @@ function Signup() {
 
     const data = {
       method: "POST",
-      body: JSON.stringify({ email, password, userName }),
+      body: JSON.stringify({ email, password, username }),
       headers: { "content-Type": "application/json" },
     };
     console.log(data);
@@ -44,7 +44,6 @@ function Signup() {
               placeholder="Identifiant"
               className="loginInput"
               id="username"
-              type="text"
             />
             <input placeholder="Email" className="loginInput" id="email" />
 
