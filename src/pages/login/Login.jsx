@@ -21,7 +21,7 @@ function Login() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data.userId);
-        //document.location.href = "/?id=" + data.userId;
+        document.location.href = "/?id=" + data.userId;
       });
   }
 

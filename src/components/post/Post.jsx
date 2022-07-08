@@ -1,16 +1,9 @@
-import axios from "axios";
-import React, { useEffect } from "react";
 //import { Link } from "react-router-dom";
 
 import "./post.css";
 import { MoreVert, ThumbUp } from "@mui/icons-material";
 
-const Post = () => {
-  //useEffect se joue lorsque le composant est monté
-  useEffect(() => {
-    axios.get("http://localhost:3000/").then((res) => console.log(res));
-  }, []);
-
+function Post() {
   return (
     <div className="post">
       <div className="postWrapper">
@@ -42,6 +35,6 @@ const Post = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Post;

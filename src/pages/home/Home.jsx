@@ -6,6 +6,15 @@ import Topbar from "../../components/topbar/Topbar";
 import "./home.css";
 
 function Home() {
+  let searchParams = new URLSearchParams(window.location.search);
+
+  if (searchParams.has("id")) {
+    var userId = searchParams.get("id");
+    console.log(userId);
+  } else {
+    window.location.pathname = "/";
+  }
+
   return (
     <>
       <Topbar />
