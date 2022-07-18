@@ -1,22 +1,16 @@
 import "./profile.css";
 import Topbar from "../../components/topbar/Topbar";
 import Feed from "../../components/feed/Feed";
+//import { useEffect, useState } from "react";
+//import axios from "axios";
+import { useParams } from "react-router";
 
 function Profile() {
-  let searchParams = new URLSearchParams(window.location.search);
+  /* const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+  //const [user, setUser] = useState({});
+  const username = useParams().username;
 
-  if (searchParams.has("id")) {
-    var userId = searchParams.get("id");
-    console.log(userId);
-  } else {
-    window.location.pathname = "/profile";
-  }
-
-  fetch("http://localhost:5500/api/users/profile" + userId)
-    .then((response) => response.json())
-    .then((userProfile) => {
-      console.log(userProfile);
-    });
+  //faire requete axios pour modifier le profile
 
   return (
     <>
@@ -27,29 +21,37 @@ function Profile() {
             <div className="profileCover">
               <img
                 className="profileCoverImg"
-                src="assets/event/event-1.jpg"
+                src={
+                  user.coverPicture
+                    ? PF + user.coverPicture
+                    : PF + "person/noCover.png"
+                }
                 alt=""
               />
               <img
                 className="profileUserImg"
-                src="assets/person/images-1.jpg"
+                src={
+                  user.profilePicture
+                    ? PF + user.profilePicture
+                    : PF + "person/noAvatar.png"
+                }
                 alt=""
               />
             </div>
             <div className="profileInfo">
               <h4 className="profileInfoName" id="profileUsername">
-                Celica
+                {user.username}
               </h4>
-              <span className="profileInfoDesc">Salut c'est moi !</span>
+              <span className="profileInfoDesc">{user.desc}</span>
             </div>
           </div>
           <div className="profileRightBottom">
-            <Feed />
+            <Feed username={username} />
           </div>
         </div>
       </div>
     </>
-  );
+  );*/
 }
 
 export default Profile;

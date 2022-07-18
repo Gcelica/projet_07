@@ -2,7 +2,11 @@ import "./topbar.css";
 import { Person, Chat, Notifications, Logout } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
-export default function Topbar() {
+function Topbar() {
+  const logOut = () => {
+    localStorage.removeItem("ACCESS_TOKEN");
+  };
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -17,7 +21,7 @@ export default function Topbar() {
 
       <div className="topbarRight">
         <nav>
-          <Link className="topbarLink" to="/login">
+          <Link className="topbarLink" onClick={logOut} to="/login">
             <Logout />
           </Link>
         </nav>
@@ -48,3 +52,5 @@ export default function Topbar() {
     </div>
   );
 }
+
+export default Topbar;

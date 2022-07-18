@@ -21,5 +21,3 @@ function App() {
 }
 
 export default App;
-
-//ajouter une redirection vers la page d'accueil
